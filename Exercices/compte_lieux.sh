@@ -22,10 +22,6 @@ echo
 
 # La ligne : grep -E "Location" => garde seulement les lignes contenant le mot Location
 
-#awk 'print{print $3}' => extrait la 3e colonne (le nom du lieu) présentée ainsi : T1	Location	Paris
-
-#| awk '{print $3}' | sort | uniq -c | sort -nr
-
 #sort permet de trier des lieux par ordre alphabétique
 
 #uniq compte que les lignes identiques consécutives
