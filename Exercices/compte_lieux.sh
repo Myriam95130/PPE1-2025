@@ -10,10 +10,11 @@ NB="${3:-10}"
 
 echo "Année, Mois et Nombre de lieux : $ANNEE, $MOIS, $NB"
 
-CLASSEMENT=$( cat "$CHEMIN"/$ANNEE/*_$MOIS*.ann 2>/dev/null | grep -E "Location" | awk '{print $3}' | sort | uniq -c | sort -nr)
+CLASSEMENT=$( cat "$CHEMIN"/$ANNEE/*_$MOIS*.ann | grep -E "Location" | cut -f3 | sort | uniq -c | sort -nr)
 
 echo "Classement des lieux les plus cités pour $ANNEE/$MOIS : "
 echo "$CLASSEMENT" | head -n "$NB"
+echo
 
 # $1 = année
 # $2 = mois
