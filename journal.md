@@ -112,3 +112,78 @@ Si on fait ./compte_lieux.sh => $1 est vide => ANNEE=* => * signifie “toutes l
 Même logique pour ${2:-*} mais pour le 2e argument. Si on oublie de mettre le mois, il mettra "*" => "tous les mois".
 
 Même logique pour ${3:-*} mais avec le nombre de lieux à afficher. Si $3 n'est pas donné, il prendra 10 ; c'est pour avoir un top 10 par défaut, on peut changer les valeurs selon nos besoins.
+
+
+22/10/2025
+
+Décrire le code du cours :
+
+# !/ usr / bin / bash
+if [ $ # - ne 1 ]
+
+## if pour vérifier si le nombre total d'arguments passés au script est 
+## différent de 1
+## -ne signifie "not equal" 
+
+then
+
+## alors
+
+echo " ce programme demande un argument "
+
+## on renvoie à l'utilisateur un message afin qu'il ajoute des arguments 
+
+exit
+fi
+
+## fin du if
+
+F I C H I E R _ U R L S = $1
+
+## on nomme un des arguments 
+
+OK =0
+NOK =0
+
+## on crée des compteurs
+## afin de les incrémenter grâce à la boucle while
+
+while read -r LINE ;
+
+## Tant qu'il y a des lignes à lire, stocker son contenu dans la variable
+## 	LINE
+## -r empêche Bash d'interpréter les antislashs comme des caractères
+## spéciaux 
+
+do
+echo " la ligne : $LINE "
+## renvoie "la ligne : $LINE (renverra un string en fonction 
+## de la ligne parcourue
+
+if [[ $LINE =∼ ^ https ?:// ]]
+
+## si la ligne commence par https ?://
+
+then ## alors
+echo " ressemble à une URL valide "
+
+## renvoie (c'est une verrification)
+OK = $ ( expr $OK + 1)
+
+## si c'est un URL valide on incrémente OK de 1
+
+else ## autre
+echo " ne ressemble pas à une URL valide "
+
+## renvoie que a ne ressemble pas à une URL
+NOK = $ ( expr $NOK + 1)
+
+## si ce n'est pas une URL valide on invrémente NOK de 1
+
+fi ## fin du fi
+
+done < $ F I C H I E R _ U R L S
+echo " $OK URLs et $NOK lignes douteuses "
+
+## renvoie le nombre d'URLs valident et invalident 
+## grâce aux résultats stockés dans les variables (arguments?)$OK et $NOK
