@@ -3,6 +3,13 @@
 echo "Arguments donnés : $1, $2, $3"
 
 CHEMIN="$HOME/PPE1-2025/Exercices/LECTURE"
+
+if [[ ! -d "$CHEMIN" ]]; then
+
+    echo "Erreur, le dossier $CHEMIN n'existe pas "
+    exit 1
+fi
+
 NB_LIGNES16=$(cat $CHEMIN/2016/*.ann | grep -E "Location|Person|Organization" | wc -l)
 
 echo "Nombre de lieux, de personnes et d'organisations en 2016 : "

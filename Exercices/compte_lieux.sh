@@ -14,7 +14,7 @@ CLASSEMENT=$( cat "$CHEMIN"/$ANNEE/*_$MOIS*.ann | grep -E "Location" | cut -f3 |
 
 echo "Classement des lieux les plus cités pour $ANNEE/$MOIS : "
 echo "$CLASSEMENT" | head -n "$NB"
-echo
+
 
 # $1 = année
 # $2 = mois

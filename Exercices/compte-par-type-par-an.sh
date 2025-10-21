@@ -1,13 +1,38 @@
 #!/bin/bash
 
 CHEMIN="$HOME/PPE1-2025/Exercices/LECTURE"
+
+if [[ ! -d "$CHEMIN" ]]; then
+    echo "Erreur, le dossier $CHEMIN n'existe pas."
+    exit 1
+fi
+
+
 for ANNEE in 2016 2017 2018
 do
     echo "Année : $ANNEE"
 
-    echo "Location : $(grep -E "Location" "$CHEMIN/$ANNEE/"*.ann | wc -l)"
-    echo "Person : $(grep -E "Person" "$CHEMIN/$ANNEE/"*.ann| wc -l) "
-    echo "Organization : $(grep -E "Organization" "$CHEMIN/$ANNEE/"*.ann | wc -l)"
+if [[ ! -d "$CHEMIN/$ANNEE" ]]; then
+    echo "Erreur, les dossiers $CHEMIN/$ANNEE n'existent pas"
+    continue
+fi
+
+for f in "$CHEMIN/$ANNEE/"*.ann; do
+    if [[ "$f" == "$CHEMIN/$ANNEE/"*.ann ]]; then
+        echo "Aucun fichier .ann trouvé dans $ANNEE."
+        break
+    fi
+
+    if [[ -f "$f" && "$f" == *.ann ]]; then
+        echo "$f est un fichier .ann valide"
+    else
+        echo "$f n'est pas un fichier .ann"
+    fi
+done
+
+    echo "Location : $(grep -E 'Location' "$CHEMIN/$ANNEE/"*.ann | wc -l)"
+    echo "Person : $(grep -E 'Person' "$CHEMIN/$ANNEE/"*.ann| wc -l) "
+    echo "Organization : $(grep -E 'Organization' "$CHEMIN/$ANNEE/"*.ann | wc -l)"
 done
 
 
