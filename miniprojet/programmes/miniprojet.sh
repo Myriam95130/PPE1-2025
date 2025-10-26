@@ -18,7 +18,7 @@ fi
 NUM_LIGNE=0
 
 
-echo -e "URL\t\tCode HTTP\t\t\t\tEncodage\t\tNb de mots"
+echo -e "NUM_LIGNE\tURL\tCode HTTP\tEncodage\tNb de mots"
 echo "----------------------------------------------------------------------------"
 
 #for URL in "$FICHIER" > boucle for utile si plusieurs fichiers
