@@ -187,3 +187,75 @@ echo " $OK URLs et $NOK lignes douteuses "
 
 ## renvoie le nombre d'URLs valident et invalident 
 ## grâce aux résultats stockés dans les variables (arguments?)$OK et $NOK
+
+25/10/2025
+
+Questions (slides miniprojet.pdf):
+
+code :
+
+while read -r line;
+do
+echo ${line};
+done < "urls/fr.txt";
+
+Questions :
+
+1. Pourquoi ne pas utiliser cat ?
+
+On utilise pas cat car cette commmande ne fait qu'afficher le contenu \n
+du fichier tandis qu'une boucle nous permet d'itérer sur un élément et \n
+de vérifier s'il correspond aux critères souhaités. Ici nous souhaitons \n
+vérifier pour chaque url et donc chaque ligne du fichier fr.txt stocké dans \n
+le dossier urls.Si l'url est ok il seraa stocké au sein de la variable line. 
+
+2. Comment transformer "urls/fr.txt" en paramètre du script ?
+
+FICHIER=$HOME/PPE1-2526/miniprojet//urls/*.fr
+
+for URL in $FICHIER
+do
+
+	while read -r line;
+	do
+		echo ${line};
+	done < $URL;
+done
+
+
+2.1 Valider l’argument : ajouter le code nécessaire pour s’assurer qu’on 
+donne bien un argument au script, sinon on s’arrête.
+
+FICHIER=$HOME/PPE1-2526/miniprojet/urls*.fr
+
+if [[ $# -eq 0 ]]; then
+	echo "Erreur, il n'y a aucun fichier dans le dossier"
+    exit 1
+fi
+
+echo "Arguments donnés : $1"
+
+for URL in $FICHIER
+do
+
+        while read -r line;
+        do
+                echo ${line};
+        done < $URL;
+done
+
+
+3. Comment afficher le numéro de ligne avant chaque URL (sur la même ligne)?
+
+Pour afficher le numéro de la ligne avant chaque URL, il faut créer un compteur qui va venir compter les lignes puis afficher le résultat du compteur pour chaque ligne :
+
+for URL IN $FICHIER
+do
+	while read -r line;
+	do
+		NUM_LIGNE=$(expr $NUM_LIGNE + 1)
+		echo -e "ligne $NUM_LIGNE \t + $line";
+	done < URL;
+done
+
+
