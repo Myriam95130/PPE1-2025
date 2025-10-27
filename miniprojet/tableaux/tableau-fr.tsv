@@ -1,11 +1,11 @@
 NUM_LIGNE	URL	Code HTTP	Encodage	Nb de mots
 ----------------------------------------------------------------------------
-ligne 1	https://fr.wikipedia.org/wiki/Robot	200	UTF-8	   13918
-ligne 2	https://fr.wikipedia.org/wiki/Robot_de_cuisine	200	UTF-8	    4124
-ligne 3	https://fr.wikipedia.org/wiki/Bot_informatique	200	UTF-8	    6540
-ligne 4	https://fr.wikipedia.org/wiki/Atlas_(robot)	200	UTF-8	    4019
-ligne 5	https://roboty.magistry.fr		Pas d'encodage	       0
-ligne 6	https://fr.wikipedia.org/wiki/Robot_(Leonard_de_Vinci)	404	UTF-8	    2296
-ligne 7	https://fr.wiktionary.org/wiki/robot	429	utf-8	     264
-ligne 8	https://fr.wikipedia.org/wiki/Protocole_d%27exclusion_des_robots	429	utf-8	     264
-ligne 9	https://fr.wikipedia.org/wiki/Robotique	429	utf-8	     264
+ligne 1	https://fr.wikipedia.org/wiki/Robot	200	UTF-8	13918
+ligne 2	https://fr.wikipedia.org/wiki/Robot_de_cuisine	200	UTF-8	4124
+ligne 3	https://fr.wikipedia.org/wiki/Bot_informatique	200	UTF-8	6540
+ligne 4	https://fr.wikipedia.org/wiki/Atlas_(robot)	200	UTF-8	4019
+ligne 5	https://roboty.magistry.fr	None	Pas d'encodage	0
+ligne 6	https://fr.wikipedia.org/wiki/Robot_(Leonard_de_Vinci)	404	UTF-8	2294
+ligne 7	https://fr.wiktionary.org/wiki/robot	200	UTF-8	17784
+ligne 8	https://fr.wikipedia.org/wiki/Protocole_d%27exclusion_des_robots	200	UTF-8	4229
+ligne 9	https://fr.wikipedia.org/wiki/Robotique	200	UTF-8	22019
