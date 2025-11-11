@@ -259,3 +259,14 @@ do
 done
 
 
+10/11/2025
+
+Changement du fichier TSV en fichier HTML. Je connaissais déjà le principe du HTML
+car j'en ai déjà fait mais je ne comprenais pas trop comment il pouvait
+être incorporé à un script Bash. Au début la sortie html me disait "Aucun argument
+trouvé" car je n'avais pas défini d'argument pour la sortie html.
+J'ai enseuite compris qu'il fallait vraiment inclure un !DOCTYPE, préciser 
+le format d'encodage, comme dans un vrai script html et non pas seulement 
+les balises. Une fois l'ajout des éléments manquants (argument + !DOCTYPE
+et le reste des balises)  effectué, le tableau s'est affiché correctement dans le navigateur, sans cellules. Je ne sais pas comment créer des cellules
+directement dans le script car cela relève du format CSS et non HTML je pense. 

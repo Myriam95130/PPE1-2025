@@ -19,12 +19,20 @@ UserAgent="PPE1-Script/1.0 (INALCO-SORBONNE-NOUVELLE-2025; projet pédagogique 2
 
 NUM_LIGNE=0
 
-
-echo -e "NUM_LIGNE\tURL\tCode HTTP\tEncodage\tNb de mots"
-echo "----------------------------------------------------------------------------"
-
 #for URL in "$FICHIER" > boucle for utile si plusieurs fichiers
 #do
+
+OUT="miniprojet.html"
+
+echo -e "<!DOCTYPE html>
+<html lang='fr'>
+<head>
+<meta charset='UTF-8'>
+<title>Résultats</title>
+</head>
+<body>
+<table>
+<tr><th>NUM_LIGNE</th><th>URL</th><th>Code HTTP</th><th>Encodage</th><th>Nb de mots</th></tr>" > "$OUT"
 
 	while read -r LINE; do
 	[[ $LINE =~ ^https?:// ]] || continue
@@ -47,9 +55,12 @@ echo "--------------------------------------------------------------------------
 		[[ -z "$NB_MOTS" ]] && NB_MOTS=0
 
 		NUM_LIGNE=$(($NUM_LIGNE + 1))
-		echo -e "ligne $NUM_LIGNE\t$LINE\t$CODE_HTTP\t$ENCODAGE\t$NB_MOTS"
-
+		echo -e "<tr><td>$NUM_LIGNE</td><td>$LINE</td><td>$CODE_HTTP</td><td>$ENCODAGE</td><td>$NB_MOTS</td></tr>" >> "$OUT"
 	done < "$FICHIER"
+
+	echo -e "</table>
+	</body>
+	</html>" >> "$OUT"
 
 #Si boucle for : done < "$URL"
 #done
