@@ -270,3 +270,19 @@ le format d'encodage, comme dans un vrai script html et non pas seulement
 les balises. Une fois l'ajout des éléments manquants (argument + !DOCTYPE
 et le reste des balises)  effectué, le tableau s'est affiché correctement dans le navigateur, sans cellules. Je ne sais pas comment créer des cellules
 directement dans le script car cela relève du format CSS et non HTML je pense. 
+
+18/11/2025
+
+J'ai eu un conflit de merge pour la première fois en modifiant mon fichier 
+html directement sur github. Je ne savais pas du tout comment régler le problème
+alors je me suis tournée vers chat gpt qui m'a aidé. Je n'avais pas le même
+fichier en local et sur github. Grâce à pwd, git branch, git status ou encore 
+find . -name "index.html", j'ai pu rendre compte du problème. Un message me disant que des commits en local et sur github ont été effectués, de ce fait
+les historiques ne sont plus les mêmes et les branches ont divergé. Chat gpt
+m'a proposé de faire "git pull --rebase origin main" afin de récupérer ce
+qu'il y avait sur Github afin de refaire les commits locaux par-dessus.Il m'a également proposé de faire "git config --global pull.rebase true" afin 
+qu'à l'avenir, git fasse toujours un rebase quand je pull. Ensuite avec nano,
+j'ai modifié le html local contenant des marqueurs de conflits, que j'ai ensuite 
+
+modifié avec la bonne version de mon html. J'ai ensuite add puis commit et 
+refais "git status" pour m'assurer que tout était ok puis j'ai push dans main.
