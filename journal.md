@@ -286,3 +286,9 @@ j'ai modifié le html local contenant des marqueurs de conflits, que j'ai ensuit
 
 modifié avec la bonne version de mon html. J'ai ensuite add puis commit et 
 refais "git status" pour m'assurer que tout était ok puis j'ai push dans main.
+
+23/12/2025
+
+Je fais face à un problème d'exécution du script qui me sort l'erreur suivante : /bin/bash: ./script.sh: Permission denied.
+J'ai testé une première commande car ce n'est pas la première fois que cela m'arrive. J'ai donc exécuté "chmod +x script.sh" comme à mon habitude, dans la plupart des cas le problème est réglé sauf qu'ici le message "permission denied" s'affiche sans cesse, je ne peux même pas accéder à la première ligne du code. Je comprends alors que je n'ai absolument aucun moyen d'accéder au script car même quand j'essaye d'afficher les lignes de celui-ci, la permission est refusée. Je demande à l'IA de me trouver une solution car je n'en est pas d'autre, elle me propose d'autres commandes telles que "chmod u+rw script.sh", "chmod u+x script.sh". 
+J'ai donc testé les commandes proposées,
