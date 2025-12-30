@@ -8,11 +8,12 @@ d'écrire dans le journal directement depuis le terminal. Il suffit de taper
 
 Cette commande me fait penser à une commande qui permet de modifier un fichier
 directement dans le terminal et dont je m'étais servie dans un projet Bash
-ultérieur. Il s'agit de "vim", dont la commande sortie est "wq". 
+ultérieur. Il s'agit de "vim", dont la commande de sortie est "wq". 
 
 De ce que j'ai compris, la commande pull permet d'envoyer les modifications 
-effectuées sur Github sur la amchine tandis que la commande "push" permet
-d'envoyer les modifications effectuées sur la machine sur Github. Il est important de toujours penser à synchroniser les modifications.
+effectuées sur Github sur la machine tandis que la commande "push" permet
+d'envoyer les modifications effectuées sur la machine sur Github. 
+Il est important de toujours penser à synchroniser les modifications.
 
 J'aimerais ajouter un détail sur les étapes à suivre pour modifier le fichier :
 1. Je suis entrée dans le dossier du projet PPE1-2025.
@@ -29,7 +30,8 @@ J'aimerais ajouter un détail sur les étapes à suivre pour modifier le fichier
 11. On refait git status et si on nous dit que "On branch main
 Your branch is up to date with 'origin/main'.nothing to commit, working tree clean" c'est que tout est ok.
 
-09/10/2025 : Aujoud'hui j'ai effectué les exercices pour m'entrainer aux Scripts Bash. L'exercice 1 ne m'a pas posé beaucoup de problème puisque j'ai déjà eu l'occasion de me familiariser au Shell et aux commandes Bash en licence TAL. L'exercice 2.a ne m'a pas posé beaucoup de problèmes si ce n'est au niveau des boucles, je connais la fonction d'une boucle, je saisbien les utiliser en Python et un peu moins en Python mais je pense avoir compris. Pour le script compte_par_type_par_an.sh, je comprenais les attentes mais je n'arrivais pas trop à visualiser clairement une structure, j'ai donc écrit et réecrit et à force, j'ai fini par un peu mieux saisir la logique du Bash. Cependant, l'exercice 2 m'a posé davantage de problèmes : j'ai compris l'énoncé mais je n'arrivais pas, encore une fois, à bien visualiser la structure attendue en Bash. Je me suis rendue compte que je ne faisais pas bien les pipelines, que parfois je passais des variables alors que ce sont des commandes qui étaient attendues. Je mettais parfois un | juste avant ou après une commande qui ne peut rien recevoir en entrée.
+09/10/2025 : Aujoud'hui j'ai effectué les exercices pour m'entrainer aux Scripts Bash. 
+L'exercice 1 ne m'a pas posé beaucoup de problème puisque j'ai déjà eu l'occasion de me familiariser au Shell et aux commandes Bash en licence TAL. L'exercice 2.a ne m'a pas posé beaucoup de problèmes si ce n'est au niveau des boucles, je connais la fonction d'une boucle, je saisbien les utiliser en Python et un peu moins en Python mais je pense avoir compris. Pour le script compte_par_type_par_an.sh, je comprenais les attentes mais je n'arrivais pas trop à visualiser clairement une structure, j'ai donc écrit et réecrit et à force, j'ai fini par un peu mieux saisir la logique du Bash. Cependant, l'exercice 2 m'a posé davantage de problèmes : j'ai compris l'énoncé mais je n'arrivais pas, encore une fois, à bien visualiser la structure attendue en Bash. Je me suis rendue compte que je ne faisais pas bien les pipelines, que parfois je passais des variables alors que ce sont des commandes qui étaient attendues. Je mettais parfois un | juste avant ou après une commande qui ne peut rien recevoir en entrée.
 Exemple : $NB_LIEUX | cat ...
 
 C'est une variable que Bash essaye d'exécuter comme un programme ce qui abouti à un "command not found" ou "permission denied".
@@ -188,7 +190,7 @@ echo " $OK URLs et $NOK lignes douteuses "
 ## renvoie le nombre d'URLs valident et invalident 
 ## grâce aux résultats stockés dans les variables (arguments?)$OK et $NOK
 
-25/10/2025
+25/10/2025 MINI-PROJET
 
 Questions (slides miniprojet.pdf):
 
@@ -259,7 +261,7 @@ do
 done
 
 
-10/11/2025
+10/11/2025 HTML - BULMA 
 
 Changement du fichier TSV en fichier HTML. Je connaissais déjà le principe du HTML
 car j'en ai déjà fait mais je ne comprenais pas trop comment il pouvait
@@ -271,7 +273,7 @@ les balises. Une fois l'ajout des éléments manquants (argument + !DOCTYPE
 et le reste des balises)  effectué, le tableau s'est affiché correctement dans le navigateur, sans cellules. Je ne sais pas comment créer des cellules
 directement dans le script car cela relève du format CSS et non HTML je pense. 
 
-18/11/2025
+18/11/2025 CONFLIT GIT
 
 J'ai eu un conflit de merge pour la première fois en modifiant mon fichier 
 html directement sur github. Je ne savais pas du tout comment régler le problème
@@ -287,8 +289,23 @@ j'ai modifié le html local contenant des marqueurs de conflits, que j'ai ensuit
 modifié avec la bonne version de mon html. J'ai ensuite add puis commit et 
 refais "git status" pour m'assurer que tout était ok puis j'ai push dans main.
 
-23/12/2025
+23/12/2025 ENCODAGE 
 
 Je fais face à un problème d'exécution du script qui me sort l'erreur suivante : /bin/bash: ./script.sh: Permission denied.
-J'ai testé une première commande car ce n'est pas la première fois que cela m'arrive. J'ai donc exécuté "chmod +x script.sh" comme à mon habitude, dans la plupart des cas le problème est réglé sauf qu'ici le message "permission denied" s'affiche sans cesse, je ne peux même pas accéder à la première ligne du code. Je comprends alors que je n'ai absolument aucun moyen d'accéder au script car même quand j'essaye d'afficher les lignes de celui-ci, la permission est refusée. Je demande à l'IA de me trouver une solution car je n'en est pas d'autre, elle me propose d'autres commandes telles que "chmod u+rw script.sh", "chmod u+x script.sh". 
-J'ai donc testé les commandes proposées,
+J'ai testé une première commande car ce n'est pas la première fois que cela m'arrive. 
+J'ai exécuté "chmod +x script.sh" comme à mon habitude, dans la plupart des cas le problème est réglé sauf qu'ici le message "permission denied" s'affiche sans cesse, je ne peux même pas accéder à la première ligne du code. Je comprends alors que je n'ai absolument aucun moyen d'accéder au script car même quand j'essaye d'afficher les lignes de celui-ci, la permission est refusée. Je demande à l'IA de me trouver une solution car je n'en est pas d'autre, elle me propose d'autres commandes telles que "chmod u+rw script.sh", "chmod u+x script.sh". 
+J'ai testé les commandes proposées, j'ai pu exécuter le code qui fonctionne sauf qu'un autre problème fait surface : le programme n'arrive à accéder à aucune de mes urls malgré le User Agent au début du script. Peut-être que cela est dû au fait que les urls ne peuvent pas contenir directement de l'arabe, puisque le message "illegal byte sequence" revient à chaque itération. La langue arabe n'est pas encodable en ASCII, d'où les messages lors de l'exécution du script, erreur liée à des conflits d'encodage. En effet, le format d'encodage par défaut sur macOS est UTF-8. Lors de l'exécution du script, l'ordinateur rencontre certainement des caractères encodés sur des octets différents non reconnus par UTF-8. Par exemple, UTF-8 peut-être encodé sur 8 bits, tout comme ISO-88-59-n ou Windows-1256 mais ils n'utilisent pas les même octets, donc ça plante. ASCII est contenu dans UTF-8 donc il n'est pas compatibke au-delà d'ASCII.
+ L'outil "curl" contient des caractères non ASCII mais peut mal interpréter les urls contenant de l'arabe en renvoyant des erreurs du type "400", "403" car les urls doivent être encodés sans être cassés. Les urls ne peuvent pas contenir directement de l'arabe. Nous avons ainsi quelques urls qui n'ont pas pu être extraites correctement.
+
+29/12/2025 WORDCLOUD
+
+Pour le nuage de mots, j'ai pu en générer un premier qui n'affichait que des carrés car l'arabe n'est pas affiché et stocké comme les langues écrites en caractères latins. 
+Les lettres arabes diffèrent en fonction de si elles sont initiales, médianes ou finales. Donc un "reshaping" en fonction de la lettre est constamment necéssaire. De plus, la langue arabe est une langue sinistroverse,contrairement aux langues retranscrites en lettres latines. Le wordcloud ne faisant pas de travail de reshaping automatique pour l'arabe, il échoue. 
+Il ne gère ni le reshaping ni la bidirectionnalité. La solution a été de préparer le texte en amont via la librairie Python "arabic_reshaper" qui permet d'exécuter le reshaping avant d'envoyer le contenu à wordcloud. Une autre librairie a été sollicitée pour gérer tout ce qui est bidirectionnalité, il s'agit de la librairie "python-bidi". 
+Unicode code les caractères mais ne gère pas tout ce qui concerne la mise en forme graphique (affichage, RTL, reshaping etc.) car  c'est le travail du moteur graphique. Ainsi, Wordcloud lit simplement Unicode, c'est pour cela qu'il échoue : il lit les caractères Unicode tel quel, sans  reshaping ni RTL. Il est important de distinguer l'alphabet, les symboles de leur rendu graphique.      
+
+30/12/2025 ENCODAGE
+
+J'ai décidé de déposer les résultats des différents scripts qui ont été exécutés sur le site du projet. Les mots ont été extraits sans aucun souci, les fichiers
+txt de l'arabe sont lisibles sauf que quand je les dépose sur le site ils deviennent illisibles, contraiement à l'espagnol et au français là où les caractères sont affichés correctement au sein des différents fichiers. Vu les caractères, il s'agit certainement d'un problème de surencodage.
+Lal langue arabe m'a posé énormément de problèmes au niveau de la tokénisation et de l'encodage. Il faudrait écrire un script pour régler le problème mais comme le dépôt des résultats sur le site n'est qu'optionnel, je ne vais pas le faire en sachant que les résultats s'affichent correctement lorsque j'ouvre les fichiers directement sur mon ordinateur. 
